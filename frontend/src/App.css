@@ -1,0 +1,42 @@
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0e27; color: #e0e0e0; margin: 0; }
+
+.join-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a0e27, #1a2849);
+}
+
+.join-screen h1 { color: #00ff88; font-size: 48px; margin: 0 0 10px 0; }
+.join-screen p { color: #888; margin: 0 0 30px 0; }
+.join-screen input { width: 300px; padding: 12px; background: #0f1729; border: 1px solid #1e3a8a; color: #e0e0e0; border-radius: 4px; margin-bottom: 15px; font-size: 16px; }
+.join-screen button { width: 300px; padding: 12px; background: #00ff88; color: #000; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 16px; }
+.join-screen button:hover { background: #00dd77; }
+
+.chat { height: 100vh; display: flex; flex-direction: column; }
+
+header { background: linear-gradient(135deg, #0f1729, #1a2849); padding: 15px 20px; border-bottom: 2px solid #1e3a8a; }
+header h1 { color: #00ff88; margin: 0; font-size: 24px; }
+header p { color: #888; margin: 5px 0 0 0; font-size: 13px; }
+
+.messages { flex: 1; overflow-y: auto; padding: 20px; background: #0a0e27; }
+
+.message { margin-bottom: 15px; padding: 10px 12px; border-radius: 6px; display: flex; gap: 10px; align-items: flex-start; flex-wrap: wrap; }
+
+.message.user_message { background: #1e3a8a; border-left: 3px solid #60a5fa; }
+.message.clawdy_message { background: #1a4d2e; border-left: 3px solid #00ff88; }
+.message.system { background: #2a2a2a; text-align: center; justify-content: center; font-size: 12px; border: none; padding: 5px; }
+
+.system-text { color: #888; }
+.user-name { color: #60a5fa; font-weight: bold; }
+.clawdy-name { color: #00ff88; font-weight: bold; }
+.text { flex: 1; word-break: break-word; }
+
+.input-area { display: flex; gap: 10px; padding: 15px 20px; background: #0f1729; border-top: 1px solid #1e3a8a; }
+input { flex: 1; padding: 12px; background: #1a2849; border: 1px solid #1e3a8a; color: #e0e0e0; border-radius: 4px; font-size: 14px; }
+input:focus { outline: none; border-color: #00ff88; }
+button { padding: 12px 24px; background: #00ff88; color: #000; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+button:hover { background: #00dd77; }

@@ -1,0 +1,14 @@
+{
+  "name": "clawdy-chat-backend",
+  "version": "0.1.0",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.13.0",
+    "cors": "^2.8.5"
+  }
+}
