@@ -6,12 +6,10 @@ COPY backend/package*.json ./backend/
 RUN cd backend && npm ci --only=production
 
 COPY frontend/package*.json ./frontend/
-RUN cd frontend && npm ci
+RUN cd frontend && npm ci --only=production
 
 COPY backend ./backend
 COPY frontend ./frontend
-
-RUN cd frontend && npm run build
 
 EXPOSE 3002
 
