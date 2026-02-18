@@ -11,7 +11,8 @@ export default function App() {
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
-    const socket = new WebSocket('ws://localhost:3002');
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const socket = new WebSocket(`${protocol}//${window.location.host}`);
 
     socket.onmessage = (event) => {
       const msg = JSON.parse(event.data);
