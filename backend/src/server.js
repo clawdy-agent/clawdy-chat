@@ -12,6 +12,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../../frontend/src')));
 
+// Serve index.html for root path
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../frontend/src/index.html'));
+});
+
 const participants = new Map();
 const messageHistory = [];
 
