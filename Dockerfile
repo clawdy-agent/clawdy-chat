@@ -5,11 +5,8 @@ WORKDIR /app
 COPY backend/package*.json ./backend/
 RUN cd backend && npm ci --only=production
 
-COPY frontend/package*.json ./frontend/
-RUN cd frontend && npm ci --only=production
-
-COPY backend ./backend
 COPY frontend ./frontend
+COPY backend ./backend
 
 EXPOSE 3002
 
